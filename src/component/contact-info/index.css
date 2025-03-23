@@ -1,0 +1,35 @@
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.contact-info__header {
+  display: flex;
+  gap: 20px;
+}
+.contact-info__image {
+  border-radius: 40px;
+}
+.contact-info__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contact-info__info {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+.contact-info__sub-value {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.contact-info__sub-value:not(:last-child)::after {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #000;
+}
