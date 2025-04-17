@@ -8,20 +8,20 @@ import Description from "./component/description";
 import ComfortOptions from "./component/comfort-options";
 import RoomDetails from "./component/room-details";
 import HotelFeatures from "./component/hotel-features";
-import Reviews from "./component/reviews"
-import Attractions from "./component/attractions"
+import Reviews from "./component/reviews";
+import Attractions from "./component/attractions";
 import ContactInfo from "./component/contact-info";
 
 function App() {
   const data = {
-    listing_name: "Іст-Сайд Біл",
+    listing_name: "East Side Bill",
     reviews_summary: {
       average_rating: 4.9,
       total_reviews: 190,
     },
     location: {
-      city: "Остін, Техас",
-      country: "Сполучені Штати",
+      city: "Austin, Texas",
+      country: "United States",
     },
     superhost: true,
 
@@ -64,7 +64,7 @@ function App() {
     ],
 
     description:
-      "Насолоджуйтеся цим чистим, сучасним котеджем, розташованим у затишному, але зручному районі Центрально-Східного Остіна. Натхненний японськими чайними будинками, цей котедж на задньому дворі забезпечує легкий доступ до місць проведення SXSW, фестивалю ACL, центру міста, чудових ресторанів та громадського транспорту, а також пропонує спокійний відпочинок для відпочинку та зарядки.",
+      "Enjoy this clean, modern cottage located in a cozy yet convenient neighborhood in Central East Austin. Inspired by Japanese tea houses, this backyard cottage provides easy access to SXSW venues, the ACL festival, downtown, excellent restaurants, and public transportation, while offering a peaceful retreat for relaxation and recharging.",
 
     property_details: {
       guests: 2,
@@ -73,7 +73,8 @@ function App() {
       baths: 1,
     },
 
-    neighborhood_info: "Район чарівний, веселий, безпечний і милий...",
+    neighborhood_info:
+      "The neighborhood is charming, lively, safe, and sweet...",
 
     amenities: {
       hasPool: true,
@@ -160,7 +161,7 @@ function App() {
 
   return (
     <Page>
-      <Header/>
+      <Header />
       <Title
         title={data.listing_name}
         rating={data.reviews_summary.average_rating}
@@ -169,7 +170,7 @@ function App() {
         country={data.location.country}
         superhost={data.superhost}
       />
-      <Photo srs={data.image} name={data.listing_name}/>
+      <Photo srs={data.image} name={data.listing_name} />
       <Price
         price={data.price.original_price}
         discount={data.price.discounted_price}
@@ -177,17 +178,20 @@ function App() {
         cleaning={data.price.cleaning_fee}
         service={data.price.service_fee}
         checkin={data.availability.checkin_date}
-        checkuot={data.availability.checkout_date}
+        checkout={data.availability.checkout_date}
       />
-      <RoomList list={data.roomTypes}/>
-      <Description title={'Опис'} children={data.description}/>
+      <RoomList list={data.roomTypes} />
+      <Description title={"Description"} children={data.description} />
       <RoomDetails
         guests={data.property_details.guests}
         bedrooms={data.property_details.bedrooms}
         beds={data.property_details.beds}
         baths={data.property_details.baths}
       />
-      <Description title={'Про сусідів'} children={data.neighborhood_info}/>
+      <Description
+        title={"About the Neighbors"}
+        children={data.neighborhood_info}
+      />
       <ComfortOptions
         pool={data.amenities.hasPool}
         gym={data.amenities.hasGym}
@@ -211,13 +215,13 @@ function App() {
       <HotelFeatures
         rules={data.additional_properties.house_rules}
         policy={data.additional_properties.cancellation_policy}
-        tranportation={data.additional_properties.local_transportation}
+        transportation={data.additional_properties.local_transportation}
         languages={data.additional_properties.host_languages}
         offers={data.additional_properties.special_offers}
         instructions={data.additional_properties.check_in_instructions}
       />
-      <Reviews list={data.guestReviews}/>
-      <Attractions list={data.nearbyAttractions}/>
+      <Reviews list={data.guestReviews} />
+      <Attractions list={data.nearbyAttractions} />
     </Page>
   );
 }
