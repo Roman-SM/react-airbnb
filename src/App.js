@@ -11,6 +11,8 @@ import HotelFeatures from "./component/hotel-features";
 import Reviews from "./component/reviews";
 import Attractions from "./component/attractions";
 import ContactInfo from "./component/contact-info";
+import photo from "./photo.jpg";
+import preview from "./preview.jpg";
 
 function App() {
   const data = {
@@ -25,7 +27,7 @@ function App() {
     },
     superhost: true,
 
-    image: "https://picsum.photos/1000/1000",
+    image: preview,
 
     price: {
       original_price: 308,
@@ -91,7 +93,7 @@ function App() {
 
     contact_info: {
       name: "Kerthy",
-      image: "https://picsum.photos/80/80",
+      image: photo,
       response_rate: 100,
       response_time: "within an hour",
       info: "I'm an Austin-Brooklyn filmmaker and television producer who can be found biking to the Farmer's Market...",
