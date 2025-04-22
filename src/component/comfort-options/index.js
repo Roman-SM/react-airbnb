@@ -37,7 +37,7 @@ function List({
 }) {
   return (
     <Fragment>
-      {pool ? <ListItem imageSrc={Pool} children={"Pool"} /> : "test2"}
+      {pool ? <ListItem imageSrc={Pool} children={"Pool"} /> : ""}
       {gym ? <ListItem imageSrc={Gym} children={"Gym"} /> : ""}
       {breakfast ? (
         <ListItem imageSrc={Breakfast} children={"Free Breakfast"} />
